@@ -5,9 +5,7 @@
 { lib, config, pkgs, inputs, vars, unstable, ... }:
 
 let
-  # Allow for packages from nixos-unstable
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; };
-};
+  placeholdervalue = true;
 
 in 
 {
