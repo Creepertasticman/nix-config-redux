@@ -65,7 +65,7 @@ in
     };
     modules = [                                             # Modules Used
       ./atomnix/configuration.nix
-    ];
+    ];git@github.com:Creepertasticman/nix-config-redux.git
   };
 
   yautja = lib.nixosSystem {                               # Desktop Profile
@@ -80,4 +80,18 @@ in
       ./yautja/configuration.nix
     ];
   };
+
+  brandon-laptop = lib.nixosSystem {                               # Desktop Profile
+    inherit system;
+    specialArgs = {                                         # Pass Flake Variable
+      inherit inputs system unstable vars;
+      host = {
+        hostName = "brandon-laptop";
+      };
+    };
+    modules = [                                             # Modules Used
+      ./brandon-laptop/configuration.nix
+    ];
+  };
+  
 }
