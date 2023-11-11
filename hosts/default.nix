@@ -65,7 +65,7 @@ in
     };
     modules = [                                             # Modules Used
       ./atomnix/configuration.nix
-    ];git@github.com:Creepertasticman/nix-config-redux.git
+    ];
   };
 
   yautja = lib.nixosSystem {                               # Desktop Profile
