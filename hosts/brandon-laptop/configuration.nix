@@ -14,6 +14,8 @@ in
       ./hardware-configuration.nix
     ];
 
+  programs.java.enable = true;
+
   # Enable Flakes and the new command-line tool
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -114,6 +116,12 @@ in
       inkscape
       cura
       krita
+      vscodium-fhs
+      vscode-fhs
+      python
+      python3
+      go
+      bitwarden
     ];
   };
 
