@@ -14,6 +14,10 @@ in
       ./hardware-configuration.nix
     ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "python-2.7.18.6"
+  ];
+
   programs.java.enable = true;
 
   # Enable Flakes and the new command-line tool
