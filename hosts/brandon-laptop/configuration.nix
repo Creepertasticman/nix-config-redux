@@ -14,10 +14,16 @@ in
       ./hardware-configuration.nix
     ];
 
+  # Power management settings
+  powerManagement.cpuFreqGovernor = "ondemand";
+  services.thermald.enable = true;
+
+  # Allow insecure packages
   nixpkgs.config.permittedInsecurePackages = [
     "python-2.7.18.6"
   ];
 
+  # Enable Java
   programs.java.enable = true;
 
   # Enable Flakes and the new command-line tool
